@@ -63,11 +63,12 @@ button { color: inherit; }
 .orbit-two { inset: 28%; border-style: solid; border-color: rgba(243,239,231,.72); box-shadow: 0 0 0 6px var(--ink), 0 0 0 7px rgba(243,239,231,.55); opacity: 1; }
 .calibration-ring { position: absolute; inset: 24%; border: 3px dotted rgba(243,239,231,.7); border-radius: 50%; pointer-events: none; }
 .number-tile { position: absolute; transform: translate(-50%, -50%); width: clamp(46px, 6.5vw, 66px); height: clamp(46px, 6.5vw, 66px); border-radius: 50%; border: 3px solid var(--cream); background: var(--ink); color: var(--cream); display: grid; place-items: center; font: 820 clamp(16px, 2vw, 24px) var(--font-geist-mono); box-shadow: 0 0 0 3px var(--ink), 0 5px 0 rgba(0,0,0,.3); cursor: pointer; z-index: 2; transition: transform .12s, background .12s, color .12s, border-color .12s, box-shadow .12s; touch-action: manipulation; }
-.number-tile:not(:disabled):hover, .number-tile:not(:disabled):focus-visible { transform: translate(-50%, -50%) scale(1.09); background: var(--lime); color: var(--ink); border-color: var(--cream); outline: none; box-shadow: 0 0 0 5px rgba(201,240,96,.22), 0 0 15px 6px rgba(201,240,96,.38), 0 0 30px rgba(201,240,96,.85); }
+.number-tile:hover, .number-tile:focus-visible { transform: translate(-50%, -50%) scale(1.09); background: var(--lime); color: var(--ink); border-color: var(--cream); outline: none; box-shadow: 0 0 0 5px rgba(201,240,96,.22), 0 0 15px 6px rgba(201,240,96,.38), 0 0 30px rgba(201,240,96,.85); }
 .number-tile:not(:disabled):active { transform: translate(-50%, -46%) scale(.96); box-shadow: none; }
 .number-tile.correct { background: var(--lime); color: var(--ink); border-color: var(--cream); box-shadow: 0 0 0 5px rgba(201,240,96,.24), 0 0 16px 7px rgba(201,240,96,.42), 0 0 34px var(--lime); }
-.number-tile:not(:disabled).wrong { background: #ff4b3e; color: white; border-color: var(--cream); box-shadow: 0 0 0 5px rgba(255,75,62,.22), 0 0 16px 7px rgba(255,75,62,.42), 0 0 34px #ff4b3e; animation: shake .18s linear; }
+.number-tile:not(:disabled).wrong { background: var(--orange); color: white; border-color: var(--cream); box-shadow: 0 0 0 5px rgba(240,90,42,.22), 0 0 16px 7px rgba(240,90,42,.42), 0 0 34px var(--orange); animation: shake .18s linear; }
 .number-tile:disabled { cursor: default; color: var(--cream); opacity: 1; }
+.number-tile:disabled:hover { color: var(--ink); }
 .clock-board[data-mode="precision"] .number-tile { width: clamp(38px, 5.2vw, 54px); height: clamp(38px, 5.2vw, 54px); }
 .clock-board[data-mode="peripheral"] .number-tile { opacity: .62; }
 .clock-board[data-mode="peripheral"] .number-tile:hover, .clock-board[data-mode="peripheral"] .number-tile:focus-visible, .clock-board[data-mode="peripheral"] .number-tile.correct, .clock-board[data-mode="peripheral"] .number-tile.wrong { opacity: 1; }
